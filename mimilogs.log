@@ -1,0 +1,50 @@
+All is OK!
+Dumb was summoned in
+ file: <main.cpp>
+ function: <main>
+ line: <16>
+Current parametres:
+size: <2>
+capacity: <2>
+[0]  -  <6.7>
+[1]  -  <6.76768>
+------------------------------------------------------------------------
+All is OK!
+Dumb was summoned in
+ file: <main.cpp>
+ function: <main>
+ line: <18>
+Current parametres:
+size: <3>
+capacity: <4>
+[0]  -  <6.7>
+[1]  -  <6.76768>
+[2]  -  <67.67>
+[3]  -  <0>
+------------------------------------------------------------------------
+All is OK!
+Dumb was summoned in
+ file: <main.cpp>
+ function: <main>
+ line: <20>
+Current parametres:
+size: <4>
+capacity: <4>
+[0]  -  <6.7>
+[1]  -  <6.76768>
+[2]  -  <67.67>
+[3]  -  <5>
+------------------------------------------------------------------------
+All is OK!
+Dumb was summoned in
+ file: <main.cpp>
+ function: <main>
+ line: <22>
+Current parametres:
+size: <3>
+capacity: <4>
+[0]  -  <6.7>
+[1]  -  <6.76768>
+[2]  -  <67.67>
+[3]  -  <0>
+------------------------------------------------------------------------

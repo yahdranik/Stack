@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['check_5fanswer_5fwith_5freference_0',['check_answer_with_reference',['../square_8h.html#a08e3cc18b7affa2de56f718f3ed95223',1,'check_answer_with_reference(int nRoots_ref, double x1_ref, double x2_ref, int nRoots, double x1, double x2):&#160;study_mode_square.c'],['../study__mode__square_8c.html#a08e3cc18b7affa2de56f718f3ed95223',1,'check_answer_with_reference(int nRoots_ref, double x1_ref, double x2_ref, int nRoots, double x1, double x2):&#160;study_mode_square.c']]],
+  ['check_5fusers_5fanswers_1',['check_users_answers',['../square_8h.html#af3e697d707e68074ab4500ae707c299b',1,'check_users_answers(int *nRoots, double *x1, double *x2):&#160;study_mode_square.c'],['../study__mode__square_8c.html#af3e697d707e68074ab4500ae707c299b',1,'check_users_answers(int *nRoots, double *x1, double *x2):&#160;study_mode_square.c']]],
+  ['clean_5fbuffer_2',['clean_buffer',['../input__square_8c.html#abc0b1ba1f366b4271d084e2a9ece74f3',1,'clean_buffer():&#160;input_square.c'],['../square_8h.html#abc0b1ba1f366b4271d084e2a9ece74f3',1,'clean_buffer():&#160;input_square.c']]],
+  ['create_5fstruct_5ffor_5ftests_3',['Create_struct_for_tests',['../square_8h.html#a674b34ee16cd3ad609b3542b7f6ac7c0',1,'Create_struct_for_tests(double a_t, double b_t, double c_t, int nRoots_ref_t, double x1_ref_t, double x2_ref_t):&#160;tests_square.c'],['../tests__square_8c.html#a674b34ee16cd3ad609b3542b7f6ac7c0',1,'Create_struct_for_tests(double a_t, double b_t, double c_t, int nRoots_ref_t, double x1_ref_t, double x2_ref_t):&#160;tests_square.c']]]
+];
