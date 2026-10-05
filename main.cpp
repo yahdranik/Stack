@@ -1,9 +1,6 @@
 #include "stack_func.h"
 #include "stack_tests.h"
 
-//TODO - top(), stack_empty() empty нужно в initialise 
-//TODO - чек валидность указателя, но не NULL
-
 int main()
 {
     stack_t variables[10];
@@ -18,11 +15,11 @@ int main()
 
     test_stack(log, variables);
 
-    fclose(log);
-
     for (size_t i = 0; i < 10; i++)
     {
         stack_destroy(&variables[i]);
     }
+        
+    fclose(log);
 }
 

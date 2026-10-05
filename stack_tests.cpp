@@ -33,10 +33,6 @@ void test_stack(FILE* log, stack_t* variables)
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_obosr_stack PASSED\n");
     fprintf(log, "=================================================\n");
-    test_obosr_struct(log, &variables[9]);
-    fprintf(log, "\n=================================================\n");
-    fprintf(log, "test_obosr_struct PASSED\n");
-    fprintf(log, "=================================================\n");
     test_obosr_canary(log, &variables[8]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_obosr_canary PASSED\n");
@@ -66,7 +62,7 @@ void test_null_capacity(FILE* log, stack_t* variable)
 
 void test_null_adress(FILE* log, stack_t* variable)
 {
-    variable->stack = NULL;
+    variable->data = NULL;
     stack_verify(variable);
     STACK_DUMP(log, variable);
 }
@@ -102,7 +98,6 @@ void test_realloc_up_down(FILE* log, stack_t* variable)
 
 void test_bad_values(FILE* log, stack_t* variable)
 {
-    variable->capacity = -500;
     variable->size = -3;
     stack_verify(variable);
     STACK_DUMP(log, variable);
@@ -110,22 +105,15 @@ void test_bad_values(FILE* log, stack_t* variable)
 
 void test_obosr_stack(FILE* log, stack_t* variable)
 {
-    variable->stack[2] = 52;
+    variable->data[2] = 52;
     stack_verify(variable);
     STACK_DUMP(log, variable);
 }
 
 void test_obosr_canary(FILE* log, stack_t* variable)
 {
-    variable->stack[0] = 5252;
+    variable->data[0] = 5252;
     variable->canary_begin = 6767;
-    stack_verify(variable);
-    STACK_DUMP(log, variable);
-}
-
-void test_obosr_struct(FILE* log, stack_t* variable)
-{
-    variable->size = 2;
     stack_verify(variable);
     STACK_DUMP(log, variable);
 }

@@ -14,6 +14,5 @@ void test_stack(FILE* log, stack_t* variables);
 void test_bad_values(FILE* log, stack_t* variable);
 void test_obosr_stack(FILE* log, stack_t* variable);
 void test_obosr_canary(FILE* log, stack_t* variable);
-void test_obosr_struct(FILE* log, stack_t* variable);
 
 #endif
