@@ -2,78 +2,58 @@ OK!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_create_push_pop>
-      line: <49>
+      line: <63>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFC48]
-      stack: variable -> stack[0000022D8526EB60]
-      stack_copy: variable -> stack_copy[0000022D8526EBE0]
+      struct: variable[00000055A39FFCC8]
+      stack: variable -> stack[00000237DDFBEC00]
       size: <1>
       capacity: <2>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <67>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <67>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
+*[0]  -  <BEDA1>
+ [1]  -  <67>
+*[2]  -  <BEBE>
+*[3]  -  <BEDA2>
 -------------------------------------------------
 OK!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_create_push_pop>
-      line: <53>
+      line: <67>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFC48]
-      stack: variable -> stack[0000022D8526EB60]
-      stack_copy: variable -> stack_copy[0000022D8526EBE0]
+      struct: variable[00000055A39FFCC8]
+      stack: variable -> stack[00000237DDFBEC00]
       size: <0>
       capacity: <2>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
+*[0]  -  <BEDA1>
+*[1]  -  <BEBE>
+*[2]  -  <BEBE>
+*[3]  -  <BEDA2>
 -------------------------------------------------
 
 =================================================
 test_create_push_pop PASSED
 =================================================
 ERROR: The capacity of stack is NULL!
-ERROR: struct was damage!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_null_capacity>
-      line: <60>
+      line: <74>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFC80]
-      stack: variable -> stack[0000022D8526EB80]
-      stack_copy: variable -> stack_copy[0000022D8526E9C0]
+      struct: variable[00000055A39FFCF0]
+      stack: variable -> stack[00000237DDFBEBA0]
       size: <0>
       capacity: <0>
       canary_end: BEDA2
@@ -82,17 +62,15 @@ Current parametres:
 test_null_capacity PASSED
 =================================================
 ERROR: The adress is NULL!
-ERROR: struct was damage!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_null_adress>
-      line: <67>
+      line: <81>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFCB8]
+      struct: variable[00000055A39FFD18]
       stack: variable -> stack[0000000000000000]
-      stack_copy: variable -> stack_copy[0000022D8526EBA0]
       size: <0>
       capacity: <2>
       canary_end: BEDA2
@@ -101,35 +79,25 @@ Current parametres:
 test_null_adress PASSED
 =================================================
 ERROR: The size of stack incorrect!
-ERROR: struct was damage!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_incorrect_size>
-      line: <74>
+      line: <88>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFCF0]
-      stack: variable -> stack[0000022D8526E9A0]
-      stack_copy: variable -> stack_copy[0000022D8526EBC0]
+      struct: variable[00000055A39FFD40]
+      stack: variable -> stack[00000237DDFBEA00]
       size: <69>
       capacity: <2>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
+*[0]  -  <BEDA1>
+*[1]  -  <BEBE>
+*[2]  -  <BEBE>
+*[3]  -  <BEDA2>
 -------------------------------------------------
 
 =================================================
@@ -139,204 +107,161 @@ OK!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_realloc_up_down>
-      line: <88>
+      line: <102>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFD28]
-      stack: variable -> stack[0000022D85270380]
-      stack_copy: variable -> stack_copy[0000022D85269670]
+      struct: variable[00000055A39FFD68]
+      stack: variable -> stack[00000237DDFC0350]
       size: <10>
       capacity: <16>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <67>
-[2]  -  <67>
-[3]  -  <67>
-[4]  -  <67>
-[5]  -  <67>
-[6]  -  <67>
-[7]  -  <67>
-[8]  -  <67>
-[9]  -  <67>
-[10]  -  <67>
-[11]  -  <BEBE>
-[12]  -  <BEBE>
-[13]  -  <BEBE>
-[14]  -  <BEBE>
-[15]  -  <BEBE>
-[16]  -  <BEBE>
-[17]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <67>
-[2]  -  <67>
-[3]  -  <67>
-[4]  -  <67>
-[5]  -  <67>
-[6]  -  <67>
-[7]  -  <67>
-[8]  -  <67>
-[9]  -  <67>
-[10]  -  <67>
-[11]  -  <BEBE>
-[12]  -  <BEBE>
-[13]  -  <BEBE>
-[14]  -  <BEBE>
-[15]  -  <BEBE>
-[16]  -  <BEBE>
-[17]  -  <BEDA2>
+*[ 0]  -  <BEDA1>
+ [ 1]  -  <67>
+ [ 2]  -  <67>
+ [ 3]  -  <67>
+ [ 4]  -  <67>
+ [ 5]  -  <67>
+ [ 6]  -  <67>
+ [ 7]  -  <67>
+ [ 8]  -  <67>
+ [ 9]  -  <67>
+ [10]  -  <67>
+*[11]  -  <BEBE>
+*[12]  -  <BEBE>
+*[13]  -  <BEBE>
+*[14]  -  <BEBE>
+*[15]  -  <BEBE>
+*[16]  -  <BEBE>
+*[17]  -  <BEDA2>
 -------------------------------------------------
 OK!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_realloc_up_down>
-      line: <96>
+      line: <110>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFD28]
-      stack: variable -> stack[0000022D85270380]
-      stack_copy: variable -> stack_copy[0000022D85269670]
+      struct: variable[00000055A39FFD68]
+      stack: variable -> stack[00000237DDFC0350]
       size: <2>
       capacity: <8>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <67>
-[2]  -  <67>
-[3]  -  <BEBE>
-[4]  -  <BEBE>
-[5]  -  <BEBE>
-[6]  -  <BEBE>
-[7]  -  <BEBE>
-[8]  -  <BEBE>
-[9]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <67>
-[2]  -  <67>
-[3]  -  <BEBE>
-[4]  -  <BEBE>
-[5]  -  <BEBE>
-[6]  -  <BEBE>
-[7]  -  <BEBE>
-[8]  -  <BEBE>
-[9]  -  <BEDA2>
+*[0]  -  <BEDA1>
+ [1]  -  <67>
+ [2]  -  <67>
+*[3]  -  <BEBE>
+*[4]  -  <BEBE>
+*[5]  -  <BEBE>
+*[6]  -  <BEBE>
+*[7]  -  <BEBE>
+*[8]  -  <BEBE>
+*[9]  -  <BEDA2>
 -------------------------------------------------
 
 =================================================
 test_realloc_up_down PASSED
 =================================================
-ERROR: The size of stack incorrect!
-ERROR: struct was damage!
+OK!
 Dump was summoned in
       file: <stack_tests.cpp>
-      function: <test_bad_values>
-      line: <103>
+      function: <test_pop_from_null>
+      line: <119>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFD60]
-      stack: variable -> stack[0000022D8526EC20]
-      stack_copy: variable -> stack_copy[0000022D8526EC40]
+      struct: variable[00000055A39FFD90]
+      stack: variable -> stack[00000237DDFBEBC0]
+      size: <0>
+      capacity: <2>
+      canary_end: BEDA2
+
+ORIGINAL stack:
+-------------------------------------------------
+*[0]  -  <BEDA1>
+*[1]  -  <BEBE>
+*[2]  -  <BEBE>
+*[3]  -  <BEDA2>
+-------------------------------------------------
+
+=================================================
+test_pop_from_null PASSED
+=================================================
+ERROR: The size of stack incorrect!
+Dump was summoned in
+      file: <stack_tests.cpp>
+      function: <test_bad_values>
+      line: <126>
+
+Current parametres:
+      canary_begin: BEDA1
+      struct: variable[00000055A39FFDB8]
+      stack: variable -> stack[00000237DDFBE9C0]
       size: <18446744073709551613>
       capacity: <2>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
+*[0]  -  <BEDA1>
+*[1]  -  <BEBE>
+*[2]  -  <BEBE>
+*[3]  -  <BEDA2>
 -------------------------------------------------
 
 =================================================
 test_bad_values PASSED
 =================================================
-ERROR: stack is spoiled!
+OK!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_obosr_stack>
-      line: <110>
+      line: <133>
 
 Current parametres:
       canary_begin: BEDA1
-      struct: variable[000000DE467FFD98]
-      stack: variable -> stack[0000022D8526EC80]
-      stack_copy: variable -> stack_copy[0000022D8526EA00]
+      struct: variable[00000055A39FFDE0]
+      stack: variable -> stack[00000237DDFBEA40]
       size: <0>
       capacity: <2>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <34>
-[3]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
+*[0]  -  <BEDA1>
+*[1]  -  <BEBE>
+*[2]  -  <34>
+*[3]  -  <BEDA2>
 -------------------------------------------------
 
 =================================================
 test_obosr_stack PASSED
 =================================================
 FATAL: Programm is out of bounds!
-ERROR: stack is spoiled!
-ERROR: struct was damage!
 Dump was summoned in
       file: <stack_tests.cpp>
       function: <test_obosr_canary>
-      line: <118>
+      line: <142>
 
 Current parametres:
       canary_begin: 1A6F
-      struct: variable[000000DE467FFDD0]
-      stack: variable -> stack[0000022D85271850]
-      stack_copy: variable -> stack_copy[0000022D85271530]
+      struct: variable[00000055A39FFE08]
+      stack: variable -> stack[00000237DDFBEA60]
       size: <0>
       capacity: <2>
       canary_end: BEDA2
 
 ORIGINAL stack:
 -------------------------------------------------
-[0]  -  <1484>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
--------------------------------------------------
-
-COPY stack:
--------------------------------------------------
-[0]  -  <BEDA1>
-[1]  -  <BEBE>
-[2]  -  <BEBE>
-[3]  -  <BEDA2>
+*[0]  -  <1484>
+*[1]  -  <BEBE>
+*[2]  -  <BEBE>
+*[3]  -  <BEDA2>
 -------------------------------------------------

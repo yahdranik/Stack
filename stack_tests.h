@@ -13,6 +13,11 @@ void test_realloc_up_down(FILE* log, stack_t* variable);
 void test_stack(FILE* log, stack_t* variables);
 void test_bad_values(FILE* log, stack_t* variable);
 void test_obosr_stack(FILE* log, stack_t* variable);
+
+#ifdef CANARY_DEBUG
 void test_obosr_canary(FILE* log, stack_t* variable);
+#endif 
+
+void test_pop_from_null(FILE* log, stack_t* variable);
 
 #endif

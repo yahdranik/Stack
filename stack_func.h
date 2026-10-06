@@ -8,8 +8,11 @@
 #include <cstdio>
 #include <stdint.h>
 
-#define DEBUG
-#ifdef DEBUG 
+// #define CANARY_DEBUG
+// #define SHADOW_DEBUG
+// #define HASHES_DEBUG 
+
+#if defined(CANARY_DEBUG) || defined(SHADOW_DEBUG) || defined(HASHES_DEBUG)
 #define STACK_DUMP(log, variable) stack_dump(log, variable, __FILE__, __FUNCTION__, __LINE__)
 #else
 #define STACK_DUMP(log, variable) ((void)0)
@@ -21,8 +24,10 @@
 #define FNV_BASIS 2166136261u
 #define FNV_PRIME 16777619u
 
+#ifdef CANARY_DEBUG
 #define CANARY_1 0xBEDA1
 #define CANARY_2 0xBEDA2
+#endif 
 
 typedef int stack_elem_t;
 typedef uint16_t error_t;
@@ -31,13 +36,13 @@ const int FACTOR = 2;
 enum stack_err_codes_t
 {
     STK_ALL_OKAY            = 0,
-    STK_NOT_REALLOCATE      = 1,
-    STK_NULL_CAPACITY       = 2,
-    STK_NULL_ADRESS         = 4,
-    STK_INCORRECT_SIZE      = 8,
-    STK_OUT_OF_BOUNDS       = 16,
-    STK_BAD_STACK           = 32,
-    STK_STRUCT_DAMAGE       = 64
+    STK_NOT_REALLOCATE      = 1<<0,
+    STK_NULL_CAPACITY       = 1<<1,
+    STK_NULL_ADRESS         = 1<<2,
+    STK_INCORRECT_SIZE      = 1<<3,
+    STK_OUT_OF_BOUNDS       = 1<<4,
+    STK_BAD_STACK           = 1<<5,
+    STK_STRUCT_DAMAGE       = 1<<6
 };
 
 enum stack_err_t
@@ -48,17 +53,24 @@ enum stack_err_t
 
 struct stack_t 
 {
+    #ifdef CANARY_DEBUG
     stack_elem_t canary_begin;
+    #endif 
 
     stack_elem_t* data;
     size_t size;
     size_t capacity;
     error_t error;
 
+    #ifdef CANARY_DEBUG
     stack_elem_t canary_end;
+    #endif 
 
-    #ifdef DEBUG
+    #ifdef SHADOW_DEBUG
     stack_elem_t* data_copy;
+    #endif 
+
+    #ifdef HASHES_DEBUG
     uint32_t hash;
     #endif
 };
@@ -73,6 +85,9 @@ int stack_dump(FILE* log, stack_t* variable, const char* file_name, const char* 
 stack_err_t stack_destroy(stack_t* variable);
 int is_equal_digits(stack_elem_t elem_1, stack_elem_t elem_2);
 void print_arrays(FILE* log, stack_elem_t* array, stack_t* variable);
-uint32_t hash_bytes(stack_t* variable);
+
+#ifdef HASHES_DEBUG
+uint32_t hash_bytes(const void* variable);
+#endif
 
 #endif

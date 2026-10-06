@@ -9,34 +9,48 @@ void test_stack(FILE* log, stack_t* variables)
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_create_push_pop PASSED\n");
     fprintf(log, "=================================================\n");
+
     test_null_capacity(log, &variables[2]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_null_capacity PASSED\n");
     fprintf(log, "=================================================\n");
+
     test_null_adress(log, &variables[3]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_null_adress PASSED\n");
     fprintf(log, "=================================================\n");
+
     test_incorrect_size(log, &variables[4]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_incorrect_size PASSED\n");
     fprintf(log, "=================================================\n");
+
     test_realloc_up_down(log, &variables[5]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_realloc_up_down PASSED\n");
     fprintf(log, "=================================================\n");
-    test_bad_values(log, &variables[6]);
+
+    test_pop_from_null(log, &variables[6]);
+    fprintf(log, "\n=================================================\n");
+    fprintf(log, "test_pop_from_null PASSED\n");
+    fprintf(log, "=================================================\n");
+
+    test_bad_values(log, &variables[7]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_bad_values PASSED\n");
     fprintf(log, "=================================================\n");
-    test_obosr_stack(log, &variables[7]);
+
+    test_obosr_stack(log, &variables[8]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_obosr_stack PASSED\n");
     fprintf(log, "=================================================\n");
-    test_obosr_canary(log, &variables[8]);
+
+    #ifdef CANARY_DEBUG
+    test_obosr_canary(log, &variables[9]);
     fprintf(log, "\n=================================================\n");
     fprintf(log, "test_obosr_canary PASSED\n");
     fprintf(log, "=================================================\n");
+    #endif
 }
 
 void test_create_push_pop(FILE* log, stack_t* variable)
@@ -96,6 +110,15 @@ void test_realloc_up_down(FILE* log, stack_t* variable)
     STACK_DUMP(log, variable);
 }
 
+void test_pop_from_null(FILE* log, stack_t* variable)
+{
+    stack_elem_t get_elem  = STACK_ELEM_INIT;
+    stack_pop(variable, &get_elem);
+    stack_verify(variable);
+    printf("%X", get_elem);
+    STACK_DUMP(log, variable);
+}
+
 void test_bad_values(FILE* log, stack_t* variable)
 {
     variable->size = -3;
@@ -110,6 +133,7 @@ void test_obosr_stack(FILE* log, stack_t* variable)
     STACK_DUMP(log, variable);
 }
 
+#ifdef CANARY_DEBUG
 void test_obosr_canary(FILE* log, stack_t* variable)
 {
     variable->data[0] = 5252;
@@ -117,3 +141,4 @@ void test_obosr_canary(FILE* log, stack_t* variable)
     stack_verify(variable);
     STACK_DUMP(log, variable);
 }
+#endif
